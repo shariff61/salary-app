@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Watch</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div id="watch">
+        <h2>This is a beautiful Watch</h2>
+        <div id="time">
+            <div><span id="hours">00</span><span>Hours</span></div>
+            <div><span id="minutes">00</span><span>Minutes</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function clock() {
+            const hour = document.getElementById('hours').innerText = new Date().getHours();
+            const minute = document.getElementById('minutes').innerText = new Date().getMinutes();
+            const second = document.getElementById('seconds').innerText = new Date().getSeconds();
+
+            // const h = new Date().getHours();
+            // const m = new Date().getMinutes();
+            // const s = new Date().getSeconds();
+
+            // hour.innerText = h;
+            // minute.innerText = m;
+            // second.innerText = s;
+
+        }
+        const interval = setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>
